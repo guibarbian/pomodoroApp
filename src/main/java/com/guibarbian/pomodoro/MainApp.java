@@ -1,21 +1,23 @@
 package com.guibarbian.pomodoro;
 
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class MainApp extends Application{
 
     @Override
-    public void start(Stage stage) {
-        Label label = new Label("Pomodoro App rodando 🚀");
+    public void start(Stage stage) throws Exception{
+        Group root = new Group();
+        Scene scene = new Scene(root, Color.BLACK);
 
-        StackPane root = new StackPane(label);
-        Scene scene = new Scene(root, 400, 200);
+        Image image = new Image("/com/guibarbian/pomodoro/images/icon.png");
 
-        stage.setTitle("Pomodoro");
+        stage.getIcons().add(image);
+        stage.setTitle("Pomodoro by GuiBarbian");
         stage.setScene(scene);
         stage.show();
     }
