@@ -1,2 +1,5 @@
-com\guibarbian\pomodoro\model\Timer.class
 com\guibarbian\pomodoro\MainApp.class
+com\guibarbian\pomodoro\view\TimerView.class
+com\guibarbian\pomodoro\service\PomodoroService.class
+com\guibarbian\pomodoro\controller\Controller.class
+com\guibarbian\pomodoro\model\PomodoroSession.class
