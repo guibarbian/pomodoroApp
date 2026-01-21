@@ -2,5 +2,4 @@ com\guibarbian\pomodoro\MainApp.class
 com\guibarbian\pomodoro\view\TimerView.class
 com\guibarbian\pomodoro\service\PomodoroService.class
 com\guibarbian\pomodoro\controller\MainController.class
-com\guibarbian\pomodoro\controller\tage.class
 com\guibarbian\pomodoro\model\PomodoroSession.class

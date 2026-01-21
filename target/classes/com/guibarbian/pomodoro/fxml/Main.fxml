@@ -20,8 +20,8 @@
       </Text>
       <Text layoutX="299.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by" textAlignment="CENTER" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="293.0" AnchorPane.topAnchor="96.0" />
       <Text layoutX="270.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GuiBarbian" />
-      <Button layoutX="282.0" layoutY="151.0" mnemonicParsing="false" text="Iniciar" />
-      <Button layoutX="269.0" layoutY="187.0" mnemonicParsing="false" text="Estatísticas" />
-      <Button layoutX="288.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleSair" text="Sair" />
+      <Button layoutX="282.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleIniciar" text="Iniciar" />
+      <Button layoutX="269.0" layoutY="203.0" mnemonicParsing="false" text="Estatísticas" />
+      <Button layoutX="288.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleSair" text="Sair" />
    </children>
 </AnchorPane>
