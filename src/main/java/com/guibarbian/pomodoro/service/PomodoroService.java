@@ -1,21 +1,33 @@
 package com.guibarbian.pomodoro.service;
 
-import java.time.Duration;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class PomodoroService {
 
-    public String calculaTempoRestante(){
-        LocalTime começo = LocalTime.now();
-        LocalTime tempoTiro = LocalTime.of(0, 30);
+    public void calculaTempoRestante(Integer tempo){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("mm:ss");
+        LocalTime zero = LocalTime.of(0,0,0);
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask(){
+            LocalTime time = LocalTime.of(0, tempo, 0);
 
-        Duration tempoRestante = (Duration.between(começo, tempoTiro));
+            @Override
+            public void run(){
+                System.out.println(time.format(dtf));
+                System.out.println(zero.format(dtf));
+                System.out.println("");
+                time = time.minusSeconds(1);
+                if(time.toString().equals(zero.toString())){
+                    System.out.println("Hora do descanso!");
+                    timer.cancel();
+                }
+            }
+        };
 
-        long minutos = tempoRestante.toMinutes();
-        long segundos = tempoRestante.toSecondsPart();
-
-        return minutos + ":" + segundos;
-
+        timer.scheduleAtFixedRate(task, 0, 1000);
     }
     
 }
