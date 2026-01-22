@@ -26,14 +26,14 @@ public class PomodoroSettingsController {
     private Parent root;
 
     public void handleComecar(ActionEvent e) throws IOException{
-        Integer tempoDeFocoInt = transformaTempoParaInteger(tempoDeFoco.getText());
+        String tempoDeFocoStr = tempoDeFoco.getText();
         Integer tempoDeDescansoInt = transformaTempoParaInteger(tempoDeDescanso.getText());
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/guibarbian/pomodoro/fxml/PomodoroPage.fxml"));
         root = loader.load();
 
         PomodoroController pomodoroController = loader.getController();
-        pomodoroController.recebeDados(tempoDeFocoInt);
+        pomodoroController.recebeDados(tempoDeFocoStr);
 
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);

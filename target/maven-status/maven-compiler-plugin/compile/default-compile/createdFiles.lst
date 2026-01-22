@@ -4,5 +4,4 @@ com\guibarbian\pomodoro\view\TimerView.class
 com\guibarbian\pomodoro\service\PomodoroService.class
 com\guibarbian\pomodoro\controller\MainController.class
 com\guibarbian\pomodoro\controller\PomodoroController.class
-com\guibarbian\pomodoro\service\PomodoroService$1.class
 com\guibarbian\pomodoro\model\PomodoroSession.class
